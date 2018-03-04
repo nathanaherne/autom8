@@ -3,42 +3,42 @@
 import autom8_userVars
 
 # Loop through each Function OnOff setting
-for funcSettings in autom8_userVars.funcOnOffArray:
+for funcOnOff in autom8_userVars.funcOnOffArray:
 
     # Check if functionOnOff value has plus or minus in them
-    plus = funcSettings.find("+")
-    minus = funcSettings.find("-")
+    plus = funcOnOff.find("+")
+    minus = funcOnOff.find("-")
 
     # If there is no time settings
-    if funcSettings == "":
+    if funcOnOff == "":
         startTime = "Blank"
         endTime = "Blank"
 
     # If function has been set to off
-    elif funcSettings == "off":
+    elif funcOnOff == "off":
         startTime = "Blank"
         endTime = "Blank"
 
     # If function is set to run always
-    elif funcSettings == "always":
+    elif funcOnOff == "always":
         startTime = "now"
         endTime = "never"
 
-    # If function has "+" or "-" in its timesetting
-    elif plus:
-        beforeAfterOperand = funcSettings.split("+")
+    # If functionOnOff has "+"
+    elif plus != -1:
+        beforeAfterOperand = funcOnOff.split("+")
         startTime = beforeAfterOperand[0]
         endTime = beforeAfterOperand[1]
         
-    elif minus:
-        beforeAfterOperand = funcSettings.split("-")
+    elif minus != -1:
+        beforeAfterOperand = funcOnOff.split("-")
         startTime = beforeAfterOperand[0]
         endTime = beforeAfterOperand[1]
 
     else:
         print("ERROR")
 
-print("TESTING funcSettings: ", funcSettings)
+print("TESTING funcOnOff: ", funcOnOff)
 if plus:
     print("Plus Found: ", plus)
 elif minus:
