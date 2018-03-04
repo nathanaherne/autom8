@@ -11,36 +11,36 @@ for funcN_Array in autom8_userVars.funcArray:
 
     # If there is no time settings
     if funcN_Array[1] == "":
-        startTime = "Blank"
-        endTime = "Blank"
+        funcN_Array[2] = "Blank"
+        funcN_Array[3] = "Blank"
 
     # If function has been set to off
     elif funcN_Array[1] == "off":
-        startTime = "Blank"
-        endTime = "Blank"
+        funcN_Array[2] = "Blank"
+        funcN_Array[3] = "Blank"
 
     # If function is set to run always
     elif funcN_Array[1] == "always":
-        startTime = "now"
-        endTime = "never"
+        funcN_Array[2] = "now"
+        funcN_Array[3] = "never"
 
     # If functionOnOff has "+"
     elif plus != -1:
         beforeAfterOperand = funcN_Array[1].split("+")
-        startTime = beforeAfterOperand[0]
-        endTime = beforeAfterOperand[1]
+        funcN_Array[2] = beforeAfterOperand[0]
+        funcN_Array[3] = beforeAfterOperand[1]
         
     elif minus != -1:
         beforeAfterOperand = funcN_Array[1].split("-")
-        startTime = beforeAfterOperand[1]
-        endTime = beforeAfterOperand[0]
+        funcN_Array[2] = beforeAfterOperand[1]
+        funcN_Array[3] = beforeAfterOperand[0]
 
     else:
         print("ERROR")
 
     print("TESTING funcX_Alias: ", funcN_Array[0])
     print("TESTING funcX_OnOff: ", funcN_Array[1])
-    print("Start Time: ", startTime, "End Time: ", endTime)
+    print("Start Time: ", funcN_Array[2], "End Time: ", funcN_Array[23])
     print("--------------------------------------------------")
 
 
