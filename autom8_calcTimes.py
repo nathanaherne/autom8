@@ -3,7 +3,7 @@
 import autom8_userVars
 
 # Loop through each Function OnOff setting
-for i in funcOnOffArray:
+for i in autom8_userVars.funcOnOffArray:
     print("TESTING i: ", i)
 
     # Check if functionOnOff value has plus or minus in them
