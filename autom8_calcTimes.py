@@ -31,7 +31,7 @@ for funcSettings in autom8_userVars.funcOnOffArray:
         endTime = beforeAfterOperand[1]
         
     elif minus:
-        beforeAfterOperand = funcSettings.split("+")
+        beforeAfterOperand = funcSettings.split("-")
         startTime = beforeAfterOperand[0]
         endTime = beforeAfterOperand[1]
 
