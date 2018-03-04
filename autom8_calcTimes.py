@@ -2,6 +2,8 @@
 
 import autom8_userVars
 
+import autom8_vars
+
 # Loop through each Function OnOff setting
 for funcN_Array in autom8_userVars.funcArray:
 
@@ -40,16 +42,16 @@ for funcN_Array in autom8_userVars.funcArray:
 
 
     if startTime == "dawn"
-        funcN_Array[2] = dawn
+        funcN_Array[2] = autom8_vars.dawn
     elif startTime == sunrise
-        funcN_Array[2] = sunrise
+        funcN_Array[2] = autom8_vars.sunrise
     elif startTime == "noon"
-        funcN_Array[2] = noon
+        funcN_Array[2] = autom8_vars.noon
     elif startTime == "sunset"
-        funcN_Array[2] = sunset
+        funcN_Array[2] = autom8_vars.sunset
     elif startTime == "dusk"
-        funcN_Array[2] = dawn
-    
+        funcN_Array[2] = autom8_vars.dawn
+
 
     print("TESTING funcX_Alias: ", funcN_Array[0])
     print("TESTING funcX_OnOff: ", funcN_Array[1])
