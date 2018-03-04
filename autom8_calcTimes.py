@@ -11,32 +11,45 @@ for funcN_Array in autom8_userVars.funcArray:
 
     # If there is no time settings
     if funcN_Array[1] == "":
-        funcN_Array[2] = "Blank"
-        funcN_Array[3] = "Blank"
+        startTime = "Blank"
+        endTime = "Blank"
 
     # If function has been set to off
     elif funcN_Array[1] == "off":
-        funcN_Array[2] = "Blank"
-        funcN_Array[3] = "Blank"
+        startTime = "Blank"
+        endTime = "Blank"
 
     # If function is set to run always
     elif funcN_Array[1] == "always":
-        funcN_Array[2] = "now"
-        funcN_Array[3] = "never"
+        startTime = "now"
+        endTime = "never"
 
     # If functionOnOff has "+"
     elif plus != -1:
         beforeAfterOperand = funcN_Array[1].split("+")
-        funcN_Array[2] = beforeAfterOperand[0]
-        funcN_Array[3] = beforeAfterOperand[1]
+        startTime = beforeAfterOperand[0]
+        endTime = beforeAfterOperand[1]
         
     elif minus != -1:
         beforeAfterOperand = funcN_Array[1].split("-")
-        funcN_Array[2] = beforeAfterOperand[1]
-        funcN_Array[3] = beforeAfterOperand[0]
+        startTime = beforeAfterOperand[1]
+        endTime = beforeAfterOperand[0]
 
     else:
         print("ERROR")
+
+
+    if startTime == "dawn"
+        funcN_Array[2] = dawn
+    elif startTime == sunrise
+        funcN_Array[2] = sunrise
+    elif startTime == "noon"
+        funcN_Array[2] = noon
+    elif startTime == "sunset"
+        funcN_Array[2] = sunset
+    elif startTime == "dusk"
+        funcN_Array[2] = dawn
+    
 
     print("TESTING funcX_Alias: ", funcN_Array[0])
     print("TESTING funcX_OnOff: ", funcN_Array[1])
