@@ -38,12 +38,12 @@ for funcOnOff in autom8_userVars.funcOnOffArray:
     else:
         print("ERROR")
 
-print("TESTING funcOnOff: ", funcOnOff)
-if plus != -1:
-    print("Plus Found: ", plus)
-elif minus != -1:
-    print("Minus Found: ", minus)
+    print("TESTING funcOnOff: ", funcOnOff)
+    if plus != -1:
+        print("Plus Found: ", plus)
+    elif minus != -1:
+        print("Minus Found: ", minus)
 
-print("Start Time: ", startTime, "End Time: ", endTime)
+    print("Start Time: ", startTime, "End Time: ", endTime)
 
 
