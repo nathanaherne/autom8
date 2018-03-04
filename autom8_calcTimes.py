@@ -41,15 +41,15 @@ for funcN_Array in autom8_userVars.funcArray:
         print("ERROR")
 
 
-    if startTime == "dawn"
+    if startTime == "dawn":
         funcN_Array[2] = autom8_vars.dawn
-    elif startTime == sunrise
+    elif startTime == "sunrise":
         funcN_Array[2] = autom8_vars.sunrise
-    elif startTime == "noon"
+    elif startTime == "noon":
         funcN_Array[2] = autom8_vars.noon
-    elif startTime == "sunset"
+    elif startTime == "sunset":
         funcN_Array[2] = autom8_vars.sunset
-    elif startTime == "dusk"
+    elif startTime == "dusk":
         funcN_Array[2] = autom8_vars.dawn
 
 
