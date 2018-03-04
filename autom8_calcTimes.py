@@ -40,7 +40,7 @@ for funcN_Array in autom8_userVars.funcArray:
 
     print("TESTING funcX_Alias: ", funcN_Array[0])
     print("TESTING funcX_OnOff: ", funcN_Array[1])
-    print("Start Time: ", funcN_Array[2], "End Time: ", funcN_Array[23])
+    print("Start Time: ", funcN_Array[2], "End Time: ", funcN_Array[3])
     print("--------------------------------------------------")
 
 
