@@ -39,9 +39,9 @@ for funcOnOff in autom8_userVars.funcOnOffArray:
         print("ERROR")
 
 print("TESTING funcOnOff: ", funcOnOff)
-if plus:
+if plus != -1:
     print("Plus Found: ", plus)
-elif minus:
+elif minus != -1:
     print("Minus Found: ", minus)
 
 print("Start Time: ", startTime, "End Time: ", endTime)
