@@ -42,7 +42,7 @@ for funcSettings in autom8_userVars.funcOnOffArray:
     if plus:
         print("Plus Found: ", plus)
     elif minus;
-    print("Minus Found: ", minus)
+        print("Minus Found: ", minus)
 
     print("Start Time: ", startTime, "End Time: ", endTime)
 
