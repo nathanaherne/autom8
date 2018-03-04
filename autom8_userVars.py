@@ -27,7 +27,7 @@ func2_Alias = "Pond Lights"
 func2_OnOff = "sunset+5h"
 func2_On = "now" # Calculated
 func2_Off = "now" # Calculated
-func1_Array = [func2_Alias, func2_OnOff, func2_On, func2_Off]
+func2_Array = [func2_Alias, func2_OnOff, func2_On, func2_Off]
 
 func3_Alias = "Side Lights"
 func3_OnOff = "sunset+5h"
