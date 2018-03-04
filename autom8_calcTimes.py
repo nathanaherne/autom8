@@ -38,12 +38,12 @@ for funcSettings in autom8_userVars.funcOnOffArray:
     else:
         print("ERROR")
 `   
-    print("TESTING funcSettings: ", funcSettings)
-    if plus:
-        print("Plus Found: ", plus)
-    elif minus;
-        print("Minus Found: ", minus)
+print("TESTING funcSettings: ", funcSettings)
+if plus:
+    print("Plus Found: ", plus)
+elif minus;
+    print("Minus Found: ", minus)
 
-    print("Start Time: ", startTime, "End Time: ", endTime)
+print("Start Time: ", startTime, "End Time: ", endTime)
 
 
