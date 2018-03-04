@@ -6,6 +6,12 @@ import autom8_userVars
 for i in funcOnOffArray:
     print("TESTING i: ", i)
 
+    # Check if functionOnOff value has plus or minus in them
+    plus = i.find("+")
+    print("TESTING Plus: ", plus)
+    minus = i.find("-")
+    print("TESTING Minus: ", minus) 
+
     # If there is no time settings
     if timeSetting == "":
         startTime = ""
@@ -22,24 +28,19 @@ for i in funcOnOffArray:
         endTime = "now + 12 hours"
 
     # If function has "+" or "-" in its timesetting
-    else:
-        plus = i.find("+")
-        print("TESTING Plus: ", plus)
-        minus = i.find("-")
-        print("TESTING Minus: ", minus) 
-
-        # If Plus "+"
-        if plus:
-            beforeAfterPlus = i.split("+")
-            print("TESTING beforePlus ", beforeAfterPlus[0], " AfterPlus ", beforeAfterPlus[1])
-            #startTime = "before+"
-            #endTime = "before+" + "after +"
+    elif plus:
+        beforeAfterPlus = i.split("+")
+        print("TESTING beforePlus ", beforeAfterPlus[0], " AfterPlus ", beforeAfterPlus[1])
+        #startTime = "before+"
+        #endTime = "before+" + "after +"
         
-        elif minus:
-            #startTime = "before-" - "after-"
-            #endTime = "before-"
+    elif minus:
+        beforeAfterMinus = i.split("+")
+        print("TESTING beforeMinux ", beforeAfterMinus[0], " AfterMinus ", beforeAfterMinus[1])
+        #startTime = "before-" - "after-"
+        #endTime = "before-"
 
-        else:
-            print("ERROR")
+    else:
+        print("ERROR")
 
 
