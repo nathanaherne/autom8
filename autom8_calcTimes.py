@@ -32,8 +32,8 @@ for funcN_Array in autom8_userVars.funcArray:
         
     elif minus != -1:
         beforeAfterOperand = funcN_Array[1].split("-")
-        startTime = beforeAfterOperand[0]
-        endTime = beforeAfterOperand[1]
+        startTime = beforeAfterOperand[1]
+        endTime = beforeAfterOperand[0]
 
     else:
         print("ERROR")
