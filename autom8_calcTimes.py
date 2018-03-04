@@ -37,7 +37,7 @@ for funcSettings in autom8_userVars.funcOnOffArray:
 
     else:
         print("ERROR")
-`   
+
 print("TESTING funcSettings: ", funcSettings)
 if plus:
     print("Plus Found: ", plus)
