@@ -14,31 +14,34 @@ for funcSettings in autom8_userVars.funcOnOffArray:
 
     # If there is no time settings
     if funcSettings == "":
-        startTime = ""
-        endTime = ""
+        startTime = "Blank"
+        endTime = "Blank"
+        print("Start Time: ", startTime, "End Time: " endtime)
 
     # If function has been set to off
     elif funcSettings == "off":
-        startTime = ""
-        endTime = ""
+        startTime = "Blank"
+        endTime = "Blank"
+        print("Start Time: ", startTime, "End Time: " endtime)
 
     # If function is set to run always
     elif funcSettings == "always":
         startTime = "now"
         endTime = "now + 12 hours"
+        print("Start Time: ", startTime, "End Time: " endtime)
 
     # If function has "+" or "-" in its timesetting
     elif plus:
-        beforeAfterPlus = funcSettings.split("+")
-        print("TESTING beforePlus ", beforeAfterPlus[0], " AfterPlus ", beforeAfterPlus[1])
-        #startTime = "before+"
-        #endTime = "before+" + "after +"
+        beforeAfterOperand = funcSettings.split("+")
+        startTime = beforeAfterOperand[0]
+        endTime = beforeAfterOperand[1]
+        print("Start Time: ", startTime, "End Time: " endtime)
         
     elif minus:
-        beforeAfterMinus = funcSettings.split("+")
-        print("TESTING beforeMinux ", beforeAfterMinus[0], " AfterMinus ", beforeAfterMinus[1])
-        #startTime = "before-" - "after-"
-        #endTime = "before-"
+        beforeAfterOperand = funcSettings.split("+")
+        startTime = beforeAfterOperand[0]
+        endTime = beforeAfterOperand[1]
+        print("Start Time: ", startTime, "End Time: " endtime)
 
     else:
         print("ERROR")
