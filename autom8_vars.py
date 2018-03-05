@@ -21,8 +21,8 @@ relay8Pin = 9
 outPins = [relay1Pin, relay2Pin, relay3Pin, relay4Pin, relay5Pin, relay6Pin, relay7Pin, relay8Pin]
 
 # Time variables
-sunrise = datetime.date
-sunset = datetime.date
-dawn = datetime.date
-dusk = datetime.date
+sunrise = datetime.now()
+sunset = datetime.now()
+dawn = datetime.now()
+dusk = datetime.now()
 

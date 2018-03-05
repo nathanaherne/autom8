@@ -27,7 +27,7 @@ for funcN_Array in autom8_userVars.funcArray:
 
     # If function is set to run always
     elif funcN_Array[1] == "always":
-        startTime = "now"
+        startTime = datetime.now()
         endTime = "never"
 
     # If functionOnOff has "+"
