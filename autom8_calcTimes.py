@@ -68,7 +68,7 @@ for funcN_Array in autom8_userVars.funcArray:
         funcN_Array[2] = autom8_vars.sunset
     elif startTime == "dusk":
         funcN_Array[2] = autom8_vars.dawn
-    elif isinstance(startTime, datetime.datetime)
+    elif isinstance(startTime, datetime.datetime):
         funcN_Array[2] = startTime
     else:
         funcN_Array[2] = startTime
@@ -84,7 +84,7 @@ for funcN_Array in autom8_userVars.funcArray:
         funcN_Array[3] = autom8_vars.sunset
     elif endTime == "dusk":
         funcN_Array[3] = autom8_vars.dawn
-    elif isinstance(endTime, datetime.datetime)
+    elif isinstance(endTime, datetime.datetime):
         funcN_Array[3] = endTime
     else:
         funcN_Array[3] = endTime
