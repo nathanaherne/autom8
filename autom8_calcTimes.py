@@ -31,14 +31,30 @@ for funcN_Array in autom8_userVars.funcArray:
         beforeAfterOperand = funcN_Array[1].split("+")
         startTime = beforeAfterOperand[0]
         endTime = beforeAfterOperand[1]
+
+        # Get hours/miunutes 
+        if startTime.split("h"):
+            endTime = startTime + timedelta(hours=endTime.split("h"))
+
+        elif startTime.split("m"):
+            endTime = startTime - timedelta(minutes=endTime.split("h"))
         
     elif minus != -1:
         beforeAfterOperand = funcN_Array[1].split("-")
         startTime = beforeAfterOperand[1]
         endTime = beforeAfterOperand[0]
 
+        # Get hours/miunutes 
+        if startTime.split("h"):
+            startTime = endTime - timedelta(hours=startTime.split("h"))
+
+        elif startTime.split("m"):
+            startTime = endTime - timedelta(minutes=startTime.split("h"))
+
+
     else:
         print("ERROR")
+
 
 
     # Calculate Start Times
@@ -52,6 +68,8 @@ for funcN_Array in autom8_userVars.funcArray:
         funcN_Array[2] = autom8_vars.sunset
     elif startTime == "dusk":
         funcN_Array[2] = autom8_vars.dawn
+    elif isinstance(startTime, datetime.datetime)
+        funcN_Array[2] = startTime
     else:
         funcN_Array[2] = startTime
 
@@ -66,6 +84,8 @@ for funcN_Array in autom8_userVars.funcArray:
         funcN_Array[3] = autom8_vars.sunset
     elif endTime == "dusk":
         funcN_Array[3] = autom8_vars.dawn
+    elif isinstance(endTime, datetime.datetime)
+        funcN_Array[3] = endTime
     else:
         funcN_Array[3] = endTime
 
