@@ -37,11 +37,13 @@ for funcN_Array in autom8_userVars.funcArray:
         endTime = beforeAfterOperand[1]
 
         # Get hours/miunutes 
-        if startTime.split("h"):
-            endTime = startTime + timedelta(hours=endTime.split("h"))
+        if startTime.find("h") != -1
+            hours = startTime.split("h"):
+            endTime = startTime + timedelta(hours=hours[0])
 
-        elif startTime.split("m"):
-            endTime = startTime - timedelta(minutes=endTime.split("h"))
+        elif startTime.find("m") != -1:
+            minutes = startTime.split("m"):
+            endTime = startTime - timedelta(minutes=minutes[0])
         
     elif minus != -1:
         beforeAfterOperand = funcN_Array[1].split("-")
@@ -49,11 +51,13 @@ for funcN_Array in autom8_userVars.funcArray:
         endTime = beforeAfterOperand[0]
 
         # Get hours/miunutes 
-        if startTime.split("h"):
-            startTime = endTime - timedelta(hours=startTime.split("h"))
+        if startTime.find("h") != -1
+            hours = startTime.split("h"):
+            startTime = endTime - timedelta(hours=hours)
 
-        elif startTime.split("m"):
-            startTime = endTime - timedelta(minutes=startTime.split("h"))
+        elif startTime.find("m") != -1
+            minutes = startTime.split("m"):
+            startTime = endTime - timedelta(minutes=minutes)
 
 
     else:
