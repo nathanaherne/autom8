@@ -37,7 +37,7 @@ for funcN_Array in autom8_userVars.funcArray:
         endTime = beforeAfterOperand[1]
 
         # Get hours/miunutes 
-        if startTime.find("h") != -1
+        if startTime.find("h") != -1:
             hours = startTime.split("h")
             endTime = startTime + timedelta(hours=hours[0])
 
