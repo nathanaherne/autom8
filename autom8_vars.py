@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-import datetime
+from datetime import datetime
 
 # Variables for Autom8
 
@@ -23,6 +23,7 @@ outPins = [relay1Pin, relay2Pin, relay3Pin, relay4Pin, relay5Pin, relay6Pin, rel
 # Time variables
 sunrise = datetime.now()
 sunset = datetime.now()
+noon = datetime.now()
 dawn = datetime.now()
 dusk = datetime.now()
 
