@@ -19,8 +19,8 @@ relay8Pin = 9
 outPins = [relay1Pin, relay2Pin, relay3Pin, relay4Pin, relay5Pin, relay6Pin, relay7Pin, relay8Pin]
 
 # Time variables
-sunrise = ""
-sunset = ""
-dawn = ""
-dusk = ""
+sunrise = datetime.date
+sunset = datetime.date
+dawn = datetime.date
+dusk = datetime.date
 
