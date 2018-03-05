@@ -43,7 +43,7 @@ for funcN_Array in autom8_userVars.funcArray:
 
         elif startTime.find("m") != -1:
             minutes = startTime.split("m")
-            endTime = startTime - timedelta(minutes=minutes[0])
+            endTime = startTime + timedelta(minutes=minutes[0])
         
     elif minus != -1:
         beforeAfterOperand = funcN_Array[1].split("-")
