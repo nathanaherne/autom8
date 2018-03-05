@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-from datetime import datetime
+import datetime
 
 import autom8_userVars
 
