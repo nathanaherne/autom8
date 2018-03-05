@@ -1,5 +1,7 @@
 #!/usr/bin/python
 
+import datetime
+
 # Variables for Autom8
 
 # Location
