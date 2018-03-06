@@ -10,6 +10,8 @@ from datetime import datetime
 # Loop through each Function OnOff setting
 for funcN_Array, i in zip(userVars.funcArray, globalVars.outPins):
 
+	print("TESTING ", funcN_Array[0], funcN_Array[1], funcN_Array[2], funcN_Array[3])
+
 	# If startTime is less than now() and startTime is not blank AND
 	# endTime > now() OR endTime is blank
 	if (funcN_Array[2] <= datetime.now() and funcN_Array[2] != "") and (funcN_Array[3] > datetime.now() or funcN_Array[3] == ""):
