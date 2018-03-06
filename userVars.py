@@ -21,8 +21,8 @@ city = "Brisbane"
 
 func1_Alias = "Pond Pump"
 func1_OnOff = "always"
-func1_On = datetime.datetime('0000-00-00 00:00:00') # Calculated
-func1_Off = datetime.datetime('0000-00-00 00:00:00') # Calculated
+func1_On = datetime.datetime(0000, 00, 00, 00, 00, 00) # Calculated
+func1_Off = datetime.datetime(0000, 00, 00, 00, 00, 00) # Calculated
 func1_Array = [func1_Alias, func1_OnOff, func1_On, func1_Off]
 
 func2_Alias = "Pond Lights"
