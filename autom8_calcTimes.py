@@ -47,7 +47,7 @@ for funcN_Array in autom8_userVars.funcArray:
     print("Start Time: ", startTime, "End Time: ", endTime)
 
 
-    # Calculate Start Times
+    # Insert Start Times
     if startTime == "dawn":
         funcN_Array[2] = autom8_vars.dawn
     elif startTime == "sunrise":
@@ -60,18 +60,9 @@ for funcN_Array in autom8_userVars.funcArray:
         funcN_Array[2] = autom8_vars.dawn
     elif isinstance(startTime, dt.datetime):
         funcN_Array[2] = startTime
-    else:
-        # Get hours/minutes 
-        if startTime.find("h") != -1:
-            hours = startTime.split("h")
-            startTime = endTime - timedelta(hours=int(hours[0]))
-
-        elif startTime.find("m") != -1:
-            minutes = startTime.split("m")
-            startTime = endTime - timedelta(minutes=int(minutes[0]))
 
 
-    # Calculate End Times
+    # Insert End Times
     if endTime == "dawn":
         funcN_Array[3] = autom8_vars.dawn
     elif endTime == "sunrise":
@@ -84,15 +75,30 @@ for funcN_Array in autom8_userVars.funcArray:
         funcN_Array[3] = autom8_vars.dawn
     elif isinstance(endTime, dt.datetime):
         funcN_Array[3] = endTime
-    else:
-        # Get hours/minutes 
-        if endTime.find("h") != -1:
-            hours = endTime.split("h")
-            endTime = startTime + timedelta(hours=int(hours[0]))
 
-        elif endTime.find("m") != -1:
-            minutes = endTime.split("m")
-            endTime = startTime + timedelta(minutes=int(minutes[0]))
+
+    # Calculate Start Times
+    # If StartTime contains hours or minutes
+    if startTime.find("h") != -1:
+        hours = startTime.split("h")
+        startTime = funcN_Array[3] - timedelta(hours=int(hours[0]))
+
+    elif startTime.find("m") != -1:
+        minutes = startTime.split("m")
+        startTime = funcN_Array[3] - timedelta(minutes=int(minutes[0]))
+
+
+    # Calculate End Times
+    # If EndTime contains hours or minutes
+    if endTime.find("h") != -1:
+        hours = endTime.split("h")
+        endTime = funcN_Array[2] + timedelta(hours=int(hours[0]))
+
+    elif endTime.find("m") != -1:
+        minutes = endTime.split("m")
+        endTime = funcN_Array[2] + timedelta(minutes=int(minutes[0]))
+
+
 
 
     print("TESTING funcX_Alias: ", funcN_Array[0])
