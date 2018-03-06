@@ -17,18 +17,18 @@ for funcN_Array in userVars.funcArray:
 
     # If there is no time settings
     if funcN_Array[1] == "":
-        startTime = ""
-        endTime = ""
+        startTime = datetime.min
+        endTime = datetime.min
 
     # If function has been set to off
     elif funcN_Array[1] == "off":
-        startTime = ""
-        endTime = ""
+        startTime = datetime.min
+        endTime = datetime.min
 
     # If function is set to run always
     elif funcN_Array[1] == "always":
         startTime = datetime.now()
-        endTime = ""
+        endTime = datetime.max
 
     # If functionOnOff has "+"
     elif plus != -1:
@@ -95,8 +95,6 @@ for funcN_Array in userVars.funcArray:
     elif isinstance(endTime, dt.datetime) == False and endTime.find("m") != -1:
         minutes = endTime.split("m")
         funcN_Array[3] = funcN_Array[2] + timedelta(minutes=int(minutes[0]))
-
-
 
 
     print("TESTING funcX_Alias: ", funcN_Array[0])
