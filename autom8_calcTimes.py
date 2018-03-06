@@ -44,7 +44,7 @@ for funcN_Array in autom8_userVars.funcArray:
     else:
         print("ERROR")
 
-    print("Start Time: ", startTime, "End Time: ", endTime)
+print("Start Time: ", startTime, "End Time: ", endTime)
 
 
     # Insert Start Times
@@ -90,11 +90,11 @@ for funcN_Array in autom8_userVars.funcArray:
 
     # Calculate End Times
     # If EndTime contains hours or minutes
-    if endTime.find("h") != -1:
+    if str(endTime).find("h") != -1:
         hours = endTime.split("h")
         endTime = funcN_Array[2] + timedelta(hours=int(hours[0]))
 
-    elif endTime.find("m") != -1:
+    elif str(endTime).find("m") != -1:
         minutes = endTime.split("m")
         endTime = funcN_Array[2] + timedelta(minutes=int(minutes[0]))
 
