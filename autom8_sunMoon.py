@@ -24,7 +24,7 @@ autom8_vars.locationLat = city.latitude
 autom8_vars.locationLon = city.longitude
 
 sun = city.sun(local=True)
-autom8_vars.dawn = datetime.datetime(sun['dawn'])
+autom8_vars.dawn = sun['dawn']
 autom8_vars.sunrise = sun['sunrise']
 autom8_vars.noon = sun['noon']
 autom8_vars.sunset = sun['sunset']
