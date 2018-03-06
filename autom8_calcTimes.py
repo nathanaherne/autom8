@@ -45,7 +45,7 @@ for funcN_Array in autom8_userVars.funcArray:
         print("ERROR")
 
     
-    print("Start Time: ", startTime, "End Time: ", endTime)
+    print("TESTING Start Time: ", startTime, "End Time: ", endTime)
 
 
     # Insert Start Times
