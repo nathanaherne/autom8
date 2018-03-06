@@ -17,8 +17,11 @@ for funcN_Array, i in zip(userVars.funcArray, globalVars.outPins):
 	# endTime > now() OR endTime is blank
 	if funcN_Array[2] != "":
 
+		print("--------------------------------------------------")
+		print("TESTING Function Name", type(funcN_Array[0]))
 		print("TESTING StartTime", type(funcN_Array[2]))
 		print("TESTING EndTime", type(funcN_Array[3]))
+
 
 		if funcN_Array[2] <= datetime.now() and (funcN_Array[3] > datetime.now() or funcN_Array[3] == ''):
 
