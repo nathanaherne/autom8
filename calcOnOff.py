@@ -4,7 +4,7 @@ import datetime as dt
 
 from datetime import timedelta, datetime
 
-import UserVars
+import userVars
 
 import globalVars
 
