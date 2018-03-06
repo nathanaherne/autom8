@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-from datetime import *
+import datetime
 
 #from datetime import timedelta, datetime
 
