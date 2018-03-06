@@ -3,6 +3,8 @@
 import globalVars
 import userVars
 
+import datetime
+
 # Get current time.
 
 # Loop through each Function OnOff setting
