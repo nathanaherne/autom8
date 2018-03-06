@@ -44,7 +44,8 @@ for funcN_Array in autom8_userVars.funcArray:
     else:
         print("ERROR")
 
-print("Start Time: ", startTime, "End Time: ", endTime)
+    
+    print("Start Time: ", startTime, "End Time: ", endTime)
 
 
     # Insert Start Times
