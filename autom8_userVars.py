@@ -47,14 +47,14 @@ func5_On = "" # Calculated
 func5_Off = "" # Calculated
 func5_Array = [func5_Alias, func5_OnOff, func5_On, func5_Off]
 
-func6_Alias = "Vege Gardens"
+func6_Alias = "Vege Garden Irrigation"
 func6_OnOff = "dawn-5m"
 func6_On = "" # Calculated
 func6_Off = "" # Calculated
 func6_Array = [func6_Alias, func6_OnOff, func6_On, func6_Off]
 
-func7_Alias = ""
-func7_OnOff = ""
+func7_Alias = "Water Recycling pump"
+func7_OnOff = "always"
 func7_On = "" # Calculated
 func7_Off = "" # Calculated
 func7_Array = [func7_Alias, func7_OnOff, func7_On, func7_Off]
