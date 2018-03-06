@@ -11,17 +11,14 @@ import RPi.GPIO as GPIO
 # Loop through each Function OnOff setting
 for funcN_Array, i in zip(userVars.funcArray, globalVars.outPins):
 
-	print("TESTING ", funcN_Array[0], funcN_Array[1], funcN_Array[2], funcN_Array[3])
+	print("TESTING Function Name", type(funcN_Array[0]))
+	print("TESTING Function On/Off", type(funcN_Array[1]))
+	print("TESTING Function On", type(funcN_Array[2]))
+	print("TESTING Function Off", type(funcN_Array[3]))
 
 	# If startTime is less than now() and startTime is not blank AND
 	# endTime > now() OR endTime is blank
 	if funcN_Array[2] != "":
-
-		print("--------------------------------------------------")
-		print("TESTING Function Name", type(funcN_Array[0]))
-		print("TESTING StartTime", type(funcN_Array[2]))
-		print("TESTING EndTime", type(funcN_Array[3]))
-
 
 		if funcN_Array[2] <= datetime.now() and (funcN_Array[3] > datetime.now() or funcN_Array[3] == ''):
 
