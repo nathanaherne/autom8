@@ -6,7 +6,7 @@ import userVars
 # Get current time.
 
 # Loop through each Function OnOff setting
-for funcN_Array in userVars.funcArray:
+for funcN_Array, i in zip(userVars.funcArray, globalVars.outPins):
 
 	# If startTime is less than now() and startTime is not blank AND
 	# endTime > now() OR endTime is blank
