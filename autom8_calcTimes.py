@@ -79,7 +79,7 @@ for funcN_Array in autom8_userVars.funcArray:
 
     # Calculate Start Times
     # If StartTime contains hours or minutes
-    if startTime.find("h") != -1:
+    if isinstance(startTime, dt.datetime) == false:
         hours = startTime.split("h")
         startTime = funcN_Array[3] - timedelta(hours=int(hours[0]))
 
