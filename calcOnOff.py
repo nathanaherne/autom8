@@ -27,7 +27,7 @@ for funcN_Array in userVars.funcArray:
     # If function is set to run always
     elif funcN_Array[1] == "always":
         startTime = datetime.now()
-        endTime = datetime.max()
+        endTime = dt.datetime.max()
 
     # If functionOnOff has "+"
     elif plus != -1:
