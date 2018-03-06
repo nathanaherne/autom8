@@ -82,10 +82,12 @@ for funcN_Array in autom8_userVars.funcArray:
     # If StartTime contains hours or minutes
     if isinstance(startTime, dt.datetime) == False and startTime.find("h") != -1:
         hours = startTime.split("h")
+        print(hours[0])
         startTime = funcN_Array[3] - timedelta(hours=int(hours[0]))
 
     elif isinstance(startTime, dt.datetime) == False and startTime.find("m") != -1:
         minutes = startTime.split("m")
+        print(minutes[0])
         startTime = funcN_Array[3] - timedelta(minutes=int(minutes[0]))
 
 
@@ -93,10 +95,12 @@ for funcN_Array in autom8_userVars.funcArray:
     # If EndTime contains hours or minutes
     if isinstance(endTime, dt.datetime) == False and endTime.find("h") != -1:
         hours = endTime.split("h")
+        print(hours[0])
         endTime = funcN_Array[2] + timedelta(hours=int(hours[0]))
 
     elif isinstance(endTime, dt.datetime) == False and endTime.find("m") != -1:
         minutes = endTime.split("m")
+        print(minutes[0])
         endTime = funcN_Array[2] + timedelta(minutes=int(minutes[0]))
 
 
