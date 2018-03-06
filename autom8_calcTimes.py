@@ -17,18 +17,18 @@ for funcN_Array in autom8_userVars.funcArray:
 
     # If there is no time settings
     if funcN_Array[1] == "":
-        startTime = "Blank"
-        endTime = "Blank"
+        startTime = ""
+        endTime = ""
 
     # If function has been set to off
     elif funcN_Array[1] == "off":
-        startTime = "Blank"
-        endTime = "Blank"
+        startTime = ""
+        endTime = ""
 
     # If function is set to run always
     elif funcN_Array[1] == "always":
         startTime = datetime.now()
-        endTime = "never"
+        endTime = ""
 
     # If functionOnOff has "+"
     elif plus != -1:
@@ -43,9 +43,6 @@ for funcN_Array in autom8_userVars.funcArray:
 
     else:
         print("ERROR")
-
-    
-    print("TESTING Start Time: ", startTime, "End Time: ", endTime)
 
 
     # Insert Start Times
