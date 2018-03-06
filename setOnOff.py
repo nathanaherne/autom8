@@ -5,6 +5,7 @@ import userVars
 
 from datetime import datetime
 import RPi.GPIO as GPIO
+import pytz
 
 # Get current time.
 
@@ -20,7 +21,7 @@ for funcN_Array, i in zip(userVars.funcArray, globalVars.outPins):
 	# endTime > now() OR endTime is blank
 	if funcN_Array[2] != datetime.min:
 
-		if funcN_Array[2] <= datetime.now(timezone.utc) and (funcN_Array[3] > datetime.now(timezone.utc) or funcN_Array[3] == datetime.max):
+		if funcN_Array[2] <= datetime.now(pytz.timezone(globalVars.timezone)) and (funcN_Array[3] > datetime.now(pytz.timezone(globalVars.timezone)) or funcN_Array[3] == datetime.max):
 
 			# Turn pin on
 			GPIO.output(i, 0)

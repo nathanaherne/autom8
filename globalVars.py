@@ -7,6 +7,7 @@ import datetime
 # Location
 locationLat = 0
 locationLon = 0
+timeZone = 0
 
 # Relay to pin mapping
 relay1Pin = 0

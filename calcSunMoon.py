@@ -17,8 +17,8 @@ city = a[userVars.city]
 
 print('Information for %s/%s\n' % (userVars.city, city.region))
 
-timezone = city.timezone
-print('Timezone: %s' % timezone)
+globalVars.timezone = city.timezone
+print('Timezone: %s' % globalVars.timezone)
 
 globalVars.locationLat = city.latitude
 globalVars.locationLon = city.longitude
