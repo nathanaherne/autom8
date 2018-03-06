@@ -1,11 +1,19 @@
 #!/usr/bin/python
 
+import globalVars
+import userVars
+
 # Get current time.
 
-for 
+# Loop through each Function OnOff setting
+for funcN_Array in userVars.funcArray:
 
-# Loop through each function array to check if they should be on/off
+	# If startTime is less than now() and startTime is not blank AND
+	# endTime > now() OR endTime is blank
+	if (funcN_Array[2] <= datetime.now() and funcN_Array[2] != "") and (funcN_Array[3] > datetime.now() or funcN_Array[3] == ""):
 
-# Check the status of each function pin on/off?
-
-# If pin does not match what it should be make change
+		# Turn pin on
+		GPIO.output(i, 0)
+	else:
+		# Turn pin off
+		GPIO.output(i, 1)
