@@ -20,7 +20,7 @@ print('Timezone: %s' % globalVars.timezone)
 globalVars.locationLat = city.latitude
 globalVars.locationLon = city.longitude
 
-sun = city.sun(local=True)
+sun = city.sun(local=False)
 globalVars.dawn = sun['dawn']
 globalVars.sunrise = sun['sunrise']
 globalVars.noon = sun['noon']
