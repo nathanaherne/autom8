@@ -3,7 +3,7 @@
 import globalVars
 import userVars
 
-import datetime
+from datetime import datetime
 
 # Get current time.
 
