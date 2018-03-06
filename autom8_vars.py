@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-from datetime import datetime
+import datetime
 
 # Variables for Autom8
 
