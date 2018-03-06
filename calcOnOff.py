@@ -1,11 +1,10 @@
 #!/usr/bin/python
 
 import datetime as dt
-
 from datetime import timedelta, datetime
+import pytz
 
 import userVars
-
 import globalVars
 
 # Loop through each Function OnOff setting
