@@ -53,7 +53,7 @@ for funcN_Array in autom8_userVars.funcArray:
         # Get hours/miunutes 
         if startTime.find("h") != -1:
             hours = startTime.split("h")
-            startTime = dt.datetime.strptime(endTime", %Y-%m-%d %H:%M:%S") - timedelta(hours=int(hours[0]))
+            startTime = dt.datetime.strptime(endTime, "%Y-%m-%d %H:%M:%S") - timedelta(hours=int(hours[0]))
 
         elif startTime.find("m") != -1:
             minutes = startTime.split("m")
