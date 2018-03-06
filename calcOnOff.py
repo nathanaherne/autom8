@@ -26,8 +26,8 @@ for funcN_Array in userVars.funcArray:
 
     # If function is set to run always
     elif funcN_Array[1] == "always":
-        startTime = datetime.now(globalVars.timezone)
-        endTime = datetime.max(globalVars.timezone)
+        startTime = datetime.now(tzinfo=globalVars.timezone)
+        endTime = datetime.max(tzinfo=globalVars.timezone)
 
     # If functionOnOff has "+"
     elif plus != -1:

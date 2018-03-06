@@ -2,12 +2,9 @@
 
 import datetime
 from astral import Astral
-#import datetime
 
 # Import autom8 variables
 import globalVars
-
-# Import User Variables
 import userVars
 
 a = Astral()
