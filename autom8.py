@@ -24,7 +24,7 @@ for i in globalVars.outPins:
         GPIO.output(i, 1)
 
 # Get Sun/Moon stages
-import getSunMoon
+import calcSunMoon
 
 # Calculate on/off times
 import calcOnOff
