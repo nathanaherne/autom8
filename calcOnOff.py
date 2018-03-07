@@ -21,13 +21,13 @@ for funcN_Array in userVars.funcArray:
 
     # If function has been set to off
     elif funcN_Array[1] == "off":
-        startTime = dt.datetime.min()
-        endTime = dt.datetime.min()
+        startTime = datetime.min
+        endTime = datetime.min
 
     # If function is set to run always
     elif funcN_Array[1] == "always":
         startTime = dt.datetime.now()
-        endTime = dt.datetime.max()
+        endTime = datetime.max
 
     # If functionOnOff has "+"
     elif plus != -1:
