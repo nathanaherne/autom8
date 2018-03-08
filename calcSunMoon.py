@@ -1,7 +1,6 @@
 #!/usr/bin/python
 
 import datetime
-from datetime import datetime
 from astral import Astral
 import pytz
 
@@ -33,7 +32,7 @@ print('Latitude: %.02f; Longitude: %.02f\n' % (city.latitude, city.longitude))
 
 #sun = city.sun( local=True)
 print('Dawn UTC:    %s' % str(sun['dawn']))
-print('Dawn Local:    %s' % sun['dawn'].replace(tzinfo=pytz.timezone(globalVars.timezone)))
+print('Dawn Local:    %s' % str(sun['dawn']).replace(tzinfo=None))
 print('Sunrise UTC: %s' % str(sun['sunrise']))
 print('Sunrise Local: %s' % str(sun['sunrise']))
 print('Noon Local:    %s' % str(sun['noon']))
