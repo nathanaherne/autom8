@@ -12,6 +12,7 @@ import pytz
 # Loop through each Function OnOff setting
 for funcN_Array, i in zip(userVars.funcArray, globalVars.outPins):
 
+	print("--------------------------------------------------")
 	print("TESTING Function Name", funcN_Array[0])
 	print("TESTING Function On/Off", funcN_Array[1])
 	print("TESTING Function On", funcN_Array[2])
