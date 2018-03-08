@@ -32,7 +32,7 @@ print('Latitude: %.02f; Longitude: %.02f\n' % (city.latitude, city.longitude))
 
 #sun = city.sun( local=True)
 print('Dawn UTC:    %s' % str(globalVars.dawn))
-print('Dawn Local:    %s' % str(globalVars.dawn.astimezone(globalVars.timezone)))
+print('Dawn Local:    %s' % str(globalVars.dawn.replace(tzinfo=pytz.utc).astimezone(pytz.timezone(globalVars.timezone))))
 print('Sunrise UTC: %s' % str(globalVars.sunrise))
 print('Sunrise Local:    %s' % str(globalVars.sunrise.astimezone(globalVars.timezone)))
 print('Noon UTC:    %s' % str(globalVars.noon))
