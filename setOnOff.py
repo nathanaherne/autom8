@@ -13,7 +13,7 @@ import pytz
 for funcN_Array, i in zip(userVars.funcArray, globalVars.outPins):
 
 	print("--------------------------------------------------")
-	print(str(funcN_Array[0])
+	print(str(funcN_Array[0]))
 
 	# If startTime is less than now() and startTime is not blank AND
 	# endTime > now() OR endTime is blank
@@ -23,7 +23,7 @@ for funcN_Array, i in zip(userVars.funcArray, globalVars.outPins):
 
 			# Turn pin on
 			GPIO.output(i, 0)
-			print("Turned on at", str(funcN_Array[2]))
+			print("Currently on - turned on at", str(funcN_Array[2]))
 			print("Will turn off at", str(funcN_Array[3]))
 		else:
 			# Turn pin off
