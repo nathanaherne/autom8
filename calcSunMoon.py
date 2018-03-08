@@ -23,10 +23,10 @@ globalVars.locationLon = city.longitude
 
 sun = city.sun(local=False)
 globalVars.dawn = sun['dawn'].replace(tzinfo=None)
-globalVars.sunrise = sun['sunrise']
-globalVars.noon = sun['noon']
-globalVars.sunset = sun['sunset']
-globalVars.dusk = sun['dusk']
+globalVars.sunrise = sun['sunrise'].replace(tzinfo=None)
+globalVars.noon = sun['noon'].replace(tzinfo=None)
+globalVars.sunset = sun['sunset'].replace(tzinfo=None)
+globalVars.dusk = sun['dusk'].replace(tzinfo=None)
 
 print('Latitude: %.02f; Longitude: %.02f\n' % (city.latitude, city.longitude))
 
@@ -34,7 +34,10 @@ print('Latitude: %.02f; Longitude: %.02f\n' % (city.latitude, city.longitude))
 print('Dawn UTC:    %s' % str(sun['dawn']))
 #print('Dawn Local:    %s' % sun['dawn'].replace(tzinfo=pytz.timezone(globalVars.timezone)))
 print('Sunrise UTC: %s' % str(sun['sunrise']))
-print('Sunrise Local: %s' % str(sun['sunrise']))
-print('Noon Local:    %s' % str(sun['noon']))
-print('Sunset Local:  %s' % str(sun['sunset']))
-print('Dusk Local:    %s' % str(sun['dusk']))
+#print('Sunrise Local: %s' % str(sun['sunrise']))
+print('Noon UTC:    %s' % str(sun['noon']))
+#print('Noon Local:    %s' % str(sun['noon']))
+print('Sunset UTC:  %s' % str(sun['sunset']))
+#print('Sunset Local:  %s' % str(sun['sunset']))
+print('Dusk UTC:    %s' % str(sun['dusk']))
+#print('Dusk Local:    %s' % str(sun['dusk']))
