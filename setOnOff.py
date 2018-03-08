@@ -15,8 +15,8 @@ for funcN_Array, i in zip(userVars.funcArray, globalVars.outPins):
 	print("--------------------------------------------------")
 	print("TESTING Function Name", funcN_Array[0])
 	print("TESTING Function On/Off", funcN_Array[1])
-	print("TESTING Function On", funcN_Array[2])
-	print("TESTING Function Off", funcN_Array[3])
+	print("TESTING Function On", str(funcN_Array[2]))
+	print("TESTING Function Off", str(funcN_Array[3]))
 
 	# If startTime is less than now() and startTime is not blank AND
 	# endTime > now() OR endTime is blank
