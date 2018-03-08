@@ -22,9 +22,11 @@ for funcN_Array, i in zip(userVars.funcArray, globalVars.outPins):
 		if funcN_Array[2] <= datetime.utcnow() and (funcN_Array[3] > datetime.utcnow() or funcN_Array[3] == datetime.max) :
 			# Turn pin on
 			GPIO.output(i, 0)
-			print("Currently on - turned on at", str(funcN_Array[2]))
+			print("Currently ON")
+			print("Turned on at", str(funcN_Array[2]))
 			print("Will turn off at", str(funcN_Array[3]))
 		else:
 			# Turn pin off
 			GPIO.output(i, 1)
+			print("Currently OFF")
 			print("Turned off at", str(funcN_Array[3]))
