@@ -13,7 +13,7 @@ import pytz
 for funcN_Array, i in zip(userVars.funcArray, globalVars.outPins):
 
 	print("--------------------------------------------------")
-	print("TESTING Function Name", funcN_Array[0])
+	print(str(funcN_Array[0])
 
 	# If startTime is less than now() and startTime is not blank AND
 	# endTime > now() OR endTime is blank
