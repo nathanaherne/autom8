@@ -112,7 +112,3 @@ except KeyboardInterrupt: # If CTRL+C is pressed, exit cleanly:
 
 except:
    print("some error") 
-
-finally:
-   print("clean up") 
-   GPIO.cleanup() # cleanup all GPIO 
