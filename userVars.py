@@ -56,7 +56,7 @@ func6_Off = "" # Calculated
 func6_Array = [func6_Alias, func6_OnOff, func6_On, func6_Off]
 
 func7_Alias = "Recycled water tap"
-func7_OnOff = ""
+func7_OnOff = "always"
 func7_On = "" # Calculated
 func7_Off = "" # Calculated
 func7_Array = [func7_Alias, func7_OnOff, func7_On, func7_Off]
