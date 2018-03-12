@@ -13,31 +13,29 @@ a.solar_depression = 'civil'
 
 city = a[userVars.city]
 
-#print('Information for %s/%s\n' % (userVars.city, city.region))
-
 globalVars.timezone = city.timezone
-#print('Timezone: %s' % globalVars.timezone)
-
 globalVars.locationLat = city.latitude
 globalVars.locationLon = city.longitude
 
-sun = city.sun(local=False)
+sunUtc = city.sun(local=False)
 globalVars.dawn = sun['dawn'].replace(tzinfo=None)
 globalVars.sunrise = sun['sunrise'].replace(tzinfo=None)
 globalVars.noon = sun['noon'].replace(tzinfo=None)
 globalVars.sunset = sun['sunset'].replace(tzinfo=None)
 globalVars.dusk = sun['dusk'].replace(tzinfo=None)
 
-#print('Latitude: %.02f; Longitude: %.02f\n' % (city.latitude, city.longitude))
-
-#sun = city.sun( local=True)
-#print('Dawn UTC:    %s' % str(globalVars.dawn))
-#print('Dawn Local:    %s' % str(globalVars.dawn.replace(tzinfo=pytz.utc).astimezone(pytz.timezone(globalVars.timezone))))
-#print('Sunrise UTC: %s' % str(globalVars.sunrise))
-#print('Sunrise Local:    %s' % str(globalVars.sunrise.replace(tzinfo=pytz.utc).astimezone(pytz.timezone(globalVars.timezone))))
-#print('Noon UTC:    %s' % str(globalVars.noon))
-#print('Noon Local:    %s' % str(globalVars.noon.replace(tzinfo=pytz.utc).astimezone(pytz.timezone(globalVars.timezone))))
-#print('Sunset UTC:  %s' % str(globalVars.sunset))
-#print('Subset Local:    %s' % str(globalVars.sunset.replace(tzinfo=pytz.utc).astimezone(pytz.timezone(globalVars.timezone))))
-#print('Dusk UTC:    %s' % str(globalVars.dusk))
-#print('Dusk Local:    %s' % str(globalVars.dusk.replace(tzinfo=pytz.utc).astimezone(pytz.timezone(globalVars.timezone))))
+print('Sun Information for %s/%s\n' % (userVars.city, city.region))
+print('Timezone: %s' % globalVars.timezone)
+print('Latitude: %.02f; Longitude: %.02f\n' % (city.latitude, city.longitude))
+print('--------------------------------------------------- %s')
+print('Dawn UTC:    %s' % str(globalVars.dawn))
+print('Sunrise UTC: %s' % str(globalVars.sunrise))
+print('Noon UTC:    %s' % str(globalVars.noon))
+print('Sunset UTC:  %s' % str(globalVars.sunset))
+print('Dusk UTC:    %s' % str(globalVars.dusk))
+print('--------------------------------------------------- %s')
+print('Dawn Local:    %s' % str(globalVars.dawn.replace(tzinfo=pytz.utc).astimezone(pytz.timezone(globalVars.timezone))))
+print('Sunrise Local:    %s' % str(globalVars.sunrise.replace(tzinfo=pytz.utc).astimezone(pytz.timezone(globalVars.timezone))))
+print('Noon Local:    %s' % str(globalVars.noon.replace(tzinfo=pytz.utc).astimezone(pytz.timezone(globalVars.timezone))))
+print('Sunset Local:    %s' % str(globalVars.sunset.replace(tzinfo=pytz.utc).astimezone(pytz.timezone(globalVars.timezone))))
+print('Dusk Local:    %s' % str(globalVars.dusk.replace(tzinfo=pytz.utc).astimezone(pytz.timezone(globalVars.timezone))))
