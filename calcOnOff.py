@@ -101,4 +101,6 @@ for funcN_Array in userVars.funcArray:
     #print("Start Time: ", str(funcN_Array[2]), "End Time: ", str(funcN_Array[3]))
     #print("--------------------------------------------------")
 
+    import setOnOff
+
 
