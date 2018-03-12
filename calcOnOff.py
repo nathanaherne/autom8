@@ -96,10 +96,10 @@ for funcN_Array in userVars.funcArray:
         funcN_Array[3] = funcN_Array[2] + timedelta(minutes=int(minutes[0]))
 
 
-    print("TESTING funcX_Alias: ", funcN_Array[0])
-    print("TESTING funcX_OnOff: ", funcN_Array[1])
-    print("Start Time: ", str(funcN_Array[2]), "End Time: ", str(funcN_Array[3]))
-    print("--------------------------------------------------")
+    #print("TESTING funcX_Alias: ", funcN_Array[0])
+    #print("TESTING funcX_OnOff: ", funcN_Array[1])
+    #print("Start Time: ", str(funcN_Array[2]), "End Time: ", str(funcN_Array[3]))
+    #print("--------------------------------------------------")
 
 
 import setOnOff
