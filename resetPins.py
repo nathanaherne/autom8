@@ -16,3 +16,5 @@ for i in globalVars.outPins:
 
         GPIO.setup(i, GPIO.OUT) 
         GPIO.output(i, 1)
+
+GPIO.cleanup() # cleanup all GPIO 
