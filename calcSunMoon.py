@@ -17,7 +17,7 @@ globalVars.timezone = city.timezone
 globalVars.locationLat = city.latitude
 globalVars.locationLon = city.longitude
 
-sunUtc = city.sun(local=False)
+sun = city.sun(local=False)
 globalVars.dawn = sun['dawn'].replace(tzinfo=None)
 globalVars.sunrise = sun['sunrise'].replace(tzinfo=None)
 globalVars.noon = sun['noon'].replace(tzinfo=None)
