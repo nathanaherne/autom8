@@ -24,7 +24,7 @@ globalVars.noon = sun['noon'].replace(tzinfo=None)
 globalVars.sunset = sun['sunset'].replace(tzinfo=None)
 globalVars.dusk = sun['dusk'].replace(tzinfo=None)
 
-print('Sun Information for %s/%s\n' % (userVars.city, city.region))
+print('Sun Information for %s/%s' % (userVars.city, city.region))
 print('Timezone: %s' % globalVars.timezone)
 print('Latitude: %.02f; Longitude: %.02f\n' % (city.latitude, city.longitude))
 print('--------------------------------------------------- %s')
