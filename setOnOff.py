@@ -28,9 +28,11 @@ for funcN_Array, i in zip(userVars.funcArray, globalVars.outPins):
 			print("Currently ON")
 			print("Turned on at", str(funcN_Array[2]))
 			print("Will turn off at", str(funcN_Array[3]))
+			print("Current Time: ", datetime.utcnow())
 		else:
 			# Turn pin off
 			GPIO.setup(i, GPIO.OUT) 
 			GPIO.output(i, 1)
 			print("Currently OFF")
 			print("Turned off at", str(funcN_Array[3]))
+			print("Current Time: ", datetime.utcnow())

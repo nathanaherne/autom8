@@ -13,10 +13,10 @@ a.solar_depression = 'civil'
 
 city = a[userVars.city]
 
-print('Information for %s/%s\n' % (userVars.city, city.region))
+#print('Information for %s/%s\n' % (userVars.city, city.region))
 
 globalVars.timezone = city.timezone
-print('Timezone: %s' % globalVars.timezone)
+#print('Timezone: %s' % globalVars.timezone)
 
 globalVars.locationLat = city.latitude
 globalVars.locationLon = city.longitude
@@ -28,7 +28,7 @@ globalVars.noon = sun['noon'].replace(tzinfo=None)
 globalVars.sunset = sun['sunset'].replace(tzinfo=None)
 globalVars.dusk = sun['dusk'].replace(tzinfo=None)
 
-print('Latitude: %.02f; Longitude: %.02f\n' % (city.latitude, city.longitude))
+#print('Latitude: %.02f; Longitude: %.02f\n' % (city.latitude, city.longitude))
 
 #sun = city.sun( local=True)
 #print('Dawn UTC:    %s' % str(globalVars.dawn))
