@@ -7,6 +7,8 @@ from datetime import datetime
 import RPi.GPIO as GPIO
 import pytz
 
+GPIO.setmode(GPIO.BCM)
+
 # Get current time.
 
 # Loop through each Function OnOff setting
