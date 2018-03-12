@@ -104,4 +104,4 @@ for funcN_Array in userVars.funcArray:
 
 import setOnOff
 
-
+GPIO.cleanup()
