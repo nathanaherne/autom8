@@ -110,5 +110,5 @@ try:
 except KeyboardInterrupt: # If CTRL+C is pressed, exit cleanly:
    print("Keyboard interrupt")
 
-except:
-   print("some error") 
+#except:
+   #print("some error") 
