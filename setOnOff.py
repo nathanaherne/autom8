@@ -3,7 +3,7 @@
 import globalVars
 import userVars
 
-from datetime import datetime
+from datetime import datetime as dt
 import RPi.GPIO as GPIO
 import pytz
 
