@@ -3,8 +3,8 @@
 import globalVars
 import userVars
 
-import datetime
-from datetime import datetime as dt
+import datetime as dt
+from datetime import datetime
 import RPi.GPIO as GPIO
 import pytz
 
@@ -20,9 +20,9 @@ for funcN_Array, i in zip(userVars.funcArray, globalVars.outPins):
 
 	# If startTime is less than now() and startTime is not blank AND
 	# endTime > now() OR endTime is blank
-	if funcN_Array[2] != dt.datetime.min:
+	if funcN_Array[2] != datetime.min:
 
-		if funcN_Array[2] <= dt.datetime.utcnow() and (funcN_Array[3] > dt.datetime.utcnow() or funcN_Array[3] == dt.datetime.max) :
+		if funcN_Array[2] <= datetime.utcnow() and (funcN_Array[3] > datetime.utcnow() or funcN_Array[3] == datetime.max) :
 			# Turn pin on
 			GPIO.setup(i, GPIO.OUT) 
 			GPIO.output(i, 0)
