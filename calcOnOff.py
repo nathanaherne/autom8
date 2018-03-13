@@ -38,10 +38,6 @@ try:
             startTime = beforeAfterOperand[0]
             endTime = beforeAfterOperand[1]
             
-        elif minus != -1:
-            beforeAfterOperand = funcN_Array[1].split("-")
-            startTime = beforeAfterOperand[1]
-            endTime = beforeAfterOperand[0]
         elif funcN_Array[1].find("-") != -1:
             beforeAfterOperand = funcN_Array[1].split("-")
             startTime = beforeAfterOperand[1]
