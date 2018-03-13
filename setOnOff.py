@@ -6,7 +6,7 @@ import userVars
 import datetime as dt
 from datetime import datetime
 import RPi.GPIO as GPIO
-import pytz
+#import pytz
 
 GPIO.setmode(GPIO.BCM)
 
