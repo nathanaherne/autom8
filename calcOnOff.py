@@ -14,8 +14,8 @@ try:
     for funcN_Array in userVars.funcArray:
 
         # Check if functionOnOff value has plus or minus in them
-        plus = funcN_Array[1].find("+")
-        minus = funcN_Array[1].find("-")
+        #plus = 
+        #minus = 
 
         # If there is no time settings
         if funcN_Array[1] == "":
@@ -33,12 +33,16 @@ try:
             endTime = datetime.max
 
         # If functionOnOff has "+"
-        elif plus != -1:
+        elif funcN_Array[1].find("+") != -1:
             beforeAfterOperand = funcN_Array[1].split("+")
             startTime = beforeAfterOperand[0]
             endTime = beforeAfterOperand[1]
             
         elif minus != -1:
+            beforeAfterOperand = funcN_Array[1].split("-")
+            startTime = beforeAfterOperand[1]
+            endTime = beforeAfterOperand[0]
+        elif funcN_Array[1].find("-") != -1:
             beforeAfterOperand = funcN_Array[1].split("-")
             startTime = beforeAfterOperand[1]
             endTime = beforeAfterOperand[0]
@@ -58,6 +62,8 @@ try:
             funcN_Array[2] = globalVars.sunset
         elif startTime == "dusk":
             funcN_Array[2] = globalVars.dawn
+        elif startTime == "now":
+            funcN_Array[2] = dt.datetime.utcnow()
         elif isinstance(startTime, dt.datetime):
             funcN_Array[2] = startTime
 
@@ -73,6 +79,8 @@ try:
             funcN_Array[3] = globalVars.sunset
         elif endTime == "dusk":
             funcN_Array[3] = globalVars.dawn
+        elif endTime == "now":
+            funcN_Array[3] = dt.datetime.utcnow()
         elif isinstance(endTime, dt.datetime):
             funcN_Array[3] = endTime
 
