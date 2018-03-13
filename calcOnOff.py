@@ -28,7 +28,7 @@ try:
             endTime = datetime.min
 
         # If function is set to run always
-        elif funcN_Array[1] == "always":
+        elif funcN_Array[1] == "always" and not isinstance(startTime, dt.datetime):
             startTime = dt.datetime.utcnow()
             endTime = datetime.max
 

@@ -3,7 +3,6 @@
 import globalVars
 import userVars
 
-import datetime
 from datetime import datetime
 import RPi.GPIO as GPIO
 import pytz
@@ -27,9 +26,9 @@ for funcN_Array, i in zip(userVars.funcArray, globalVars.outPins):
 			GPIO.setup(i, GPIO.OUT) 
 			GPIO.output(i, 0)
 			print("Currently ON")
-			print("Turned on at", str(funcN_Array[2]))
-			print("Will turn off at", str(funcN_Array[3]))
-			print("Current Time: ", str(datetime.utcnow()))
+			print("Turned on at", str(funcN_Array[2].replace(tzinfo=pytz.utc).astimezone(pytz.timezone(globalVars.timezone))))
+			print("Will turn off at", str(funcN_Array[3].replace(tzinfo=pytz.utc).astimezone(pytz.timezone(globalVars.timezone))))
+			print("Current Time: ", str(datetime.utcnow().replace(tzinfo=pytz.utc).astimezone(pytz.timezone(globalVars.timezone))))
 		else:
 			# Turn pin off
 			GPIO.setup(i, GPIO.OUT) 
